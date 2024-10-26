@@ -1,0 +1,22 @@
+name: Fifh Workflow
+on: 
+  push:
+    branches:
+      - main
+      - "page/*" #page/hello page/about
+      - "page/**" #page/category/hellos
+      - "!page/blog" # except page/blog
+    #tags: disabled because uses "AND" logic
+      #- "v1*"
+    paths:
+      "**.html"
+
+jobs: 
+  echo-vars:
+    runs-on: macos-latest
+    steps:
+      - run: |
+         echo $GITHUB_SHA
+         echo $GITHUB_REF
+  
+  
