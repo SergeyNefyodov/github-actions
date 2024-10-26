@@ -5,9 +5,9 @@ jobs:
   run-first-command:
     runs-on: ubuntu-latest
     steps:
-      - name: Command in MultiLine
-        run: |
-          pwd
-          ls -a
-          ls --help
+      - name: List files before copy
+        run: ls -a
+      - uses: actions/checkout@v4
+      - name: List files after copy
+        run: ls -a
   
