@@ -1,0 +1,13 @@
+name: Fifh Workflow
+on: 
+  [push, issues, pull_request]
+
+jobs: 
+  echo-vars:
+    runs-on: macos-latest
+    steps:
+      - run: |
+         echo $GITHUB_SHA
+         echo $GITHUB_REF
+  
+  
