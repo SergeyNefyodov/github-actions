@@ -8,7 +8,7 @@ on:
       - "!page/blog" # except page/blog
     #tags: disabled because uses "AND" logic
       #- "v1*"
-    paths:
+    paths: # uses and-logic and does not execute without changges in the paths
       "**.html"
 
 jobs: 
