@@ -7,7 +7,13 @@ jobs:
     steps:
       - name: List files before copy
         run: ls -a
-      - uses: actions/checkout@v4
+      #- uses: actions/checkout@v4
+      - name: Copy
+        run: |
+          git init
+          git remote "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}github.com/SergeyNefyodov/$GITHUB_REPOSITORY.git"
+          git fetch origin
+          git checkout main
       - name: List files after copy
         run: ls -a
   
