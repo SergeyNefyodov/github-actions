@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: show index
-        run: cat index.html
+        run: echo 'hello!'
       
   
