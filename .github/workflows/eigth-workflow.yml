@@ -7,6 +7,20 @@ on:
         type: string
         required: true
         default: Hello World!
+      selectCustom:
+        description: custom comboBox
+        type: choice
+        required: true
+        options:
+          - Value 1
+          - Value 2
+          - Value 3
+        default: 
+          Value 2
+      checkCustom:
+        description: Custom CheckBox
+        type: boolean
+        required: false
 
 jobs: 
   echo-vars:
