@@ -1,0 +1,14 @@
+name: Seventh Workflow
+on: 
+  schedule:
+    - cron: "*/3 * * * 2"
+
+jobs: 
+  echo-vars:
+    runs-on: macos-latest
+    steps:
+      - run: |
+         echo $GITHUB_SHA
+         echo $GITHUB_REF
+  
+  
