@@ -30,7 +30,7 @@ jobs:
          echo $GITHUB_SHA
          echo $GITHUB_REF
          echo "Title is ${{ inputs.titleCustom }}"
-         echo "Title is ${{ inputs.selectCustom }}"
-         echo "Title is ${{ inputs.checkCustom }}"
+         echo "Select is ${{ inputs.selectCustom }}"
+         echo "Checkbox is ${{ inputs.checkCustom }}"
   
   
