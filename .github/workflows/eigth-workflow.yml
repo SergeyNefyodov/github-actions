@@ -1,0 +1,19 @@
+name: Eigth Workflow
+on: 
+  workflow_dispatch:
+    inputs:
+      titleCustom:
+        description: Type the Title
+        type: string
+        required: true
+        default: Hello World!
+
+jobs: 
+  echo-vars:
+    runs-on: macos-latest
+    steps:
+      - run: |
+         echo $GITHUB_SHA
+         echo $GITHUB_REF
+  
+  
