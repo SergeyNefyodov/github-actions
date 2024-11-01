@@ -1,6 +1,7 @@
 name: Tenth Workflow
 on: 
   push
+run-name: Display context info
 
 jobs: 
   echo-vars:
@@ -12,6 +13,9 @@ jobs:
          echo '${{ toJson(github) }}'
          echo '${{ toJson(runner) }}'
          echo '${{ toJson(job) }}'
+      - name: Steps
+        id: steps
+        run: |
          echo '${{ toJson(steps) }}'
   
   
