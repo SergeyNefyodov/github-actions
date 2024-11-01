@@ -1,0 +1,22 @@
+name: Thirteenth Workflow
+on:
+  push
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: sleep 30
+      - name: Runs On Cancelled
+        if: ${{ cancelled() }} 
+        run: Echo "Runs On Cancelled"
+      - name: Runs On Success
+        if: ${{ Success() }} 
+        run: Echo "Runs On Success"
+      - name: Runs anyway
+        if: ${{ always() }} 
+        run: Echo "Runs anyway"
+      - name: Runs On Failure
+        if: ${{ failure() }} 
+        run: Echo "Runs On Failure"
