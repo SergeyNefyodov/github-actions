@@ -16,7 +16,6 @@ jobs:
           NEW_CUSTOM_VAR1: "VAR 1"
         run: |
           echo "NEW_CUSTOM_VAR2=VAR 2" >> "$GITHUB_ENV"
-          echo $NEW_CUSTOM_VAR1 >> "$GITHUB_ENV"
       - name: Vars
         env:
           STEP_CUSTOM_VAR: STEP 1
@@ -28,7 +27,6 @@ jobs:
          echo ${{ env.WF_CUSTOM_VAR}}
          echo ${{ env.JOB_CUSTOM_VAR}}
          echo ${{ env.STEP_CUSTOM_VAR}}
-         echo $NEW_CUSTOM_VAR1
          echo $NEW_CUSTOM_VAR2
   
   
