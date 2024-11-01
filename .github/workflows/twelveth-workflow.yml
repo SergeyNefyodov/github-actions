@@ -1,0 +1,15 @@
+name: Twelveth Workflow
+on: 
+  push
+run-name: Echo repository secrets and vars
+
+jobs: 
+  echo-vars:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Vars
+        run: |
+         echo ${{vars.STATUS}}
+         echo ${{secrets.PASSWORD}}
+  
+  
