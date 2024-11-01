@@ -10,13 +10,13 @@ jobs:
         run: sleep 30
       - name: Runs On Cancelled
         if: ${{ cancelled() }} 
-        run: Echo "Runs On Cancelled"
+        run: echo "Runs On Cancelled"
       - name: Runs On Success
         if: ${{ Success() }} 
-        run: Echo "Runs On Success"
+        run: echo "Runs On Success"
       - name: Runs anyway
         if: ${{ always() }} 
-        run: Echo "Runs anyway"
+        run: echo "Runs anyway"
       - name: Runs On Failure
         if: ${{ failure() }} 
-        run: Echo "Runs On Failure"
+        run: echo "Runs On Failure"
