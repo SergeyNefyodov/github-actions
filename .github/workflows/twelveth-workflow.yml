@@ -6,6 +6,7 @@ run-name: Echo repository secrets and vars
 jobs: 
   echo-vars:
     runs-on: ubuntu-latest
+    environment: "staging"
     steps:
       - name: Vars
         run: |
