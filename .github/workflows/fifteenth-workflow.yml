@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Math expression
-        run: expr 2+2 > math.txt
+        run: expr 2 + 2 > math.txt
       - name: upload result
         uses: actions/upload-artifact@v3
         with:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: first-job
     steps:
-      - name: DOwnload artifact
+      - name: Download artifact
         uses: actions/download-artifact@v3
         with: 
           name: math
