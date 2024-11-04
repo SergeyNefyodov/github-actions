@@ -20,15 +20,15 @@ jobs:
         uses: actions/download-artifact@v3
         with: 
           name: math
-      - name: Mdify result
+      - name: Modify result
         run: |
           value=`cat math.txt`
-          echo $expr value \* 3 > math.txt
-          - name: upload result
-          uses: actions/upload-artifact@v3
-          with:
-            name: math
-            path: math.txt
+          expr $value \* 3 > math.txt
+      - name: upload result
+        uses: actions/upload-artifact@v3
+        with:
+          name: math
+          path: math.txt
 
   second-job:
     runs-on: ubuntu-latest
