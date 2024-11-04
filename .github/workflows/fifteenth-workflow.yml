@@ -12,3 +12,14 @@ jobs:
         with:
           name: math
           path: math.txt
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DOwnload artifact
+        uses: actions/download-artifact@v3
+        with: 
+          name: math
+      - name: Display result
+        run: |
+          value='cat math.txt'
+          echo $value
