@@ -12,4 +12,4 @@ jobs:
   console-log:
     runs-on: ubuntu-latest
     steps:
-      - run: echo '${{ inputs.title }}'
+      - run: echo '${{ inputs.title }}' 

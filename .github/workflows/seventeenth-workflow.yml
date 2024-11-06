@@ -15,3 +15,8 @@ jobs:
     uses: ./.github/workflows/workflow-template.yml
     with:
       title: ${{ inputs.title }}
+
+  call-external-workflow:
+    uses: SergeyNefyodov/workflow-templates/.github/workflows/template.yml@main
+    secrets:
+      password: ${{ secrets.PASSWORD}}
