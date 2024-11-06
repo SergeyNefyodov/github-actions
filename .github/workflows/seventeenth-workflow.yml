@@ -20,3 +20,9 @@ jobs:
     uses: SergeyNefyodov/workflow-templates/.github/workflows/template.yml@main
     secrets:
       password: ${{ secrets.PASSWORD}}
+
+  show-output:
+    runs-on: ubuntu-latest
+    needs: show-title
+    steps:
+      - run: echo ${{ needs.show-title.outputs.date }}
