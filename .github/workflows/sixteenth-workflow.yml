@@ -1,6 +1,6 @@
 name: Sixteenth Workflow
-run-name: Display noode version - matrix
-on: push
+run-name: Display node version - matrix
+on: workflow_dispatch
 
 jobs:
     test-node:

@@ -1,0 +1,17 @@
+name: Seventeenth-workflow
+run-name: Template caller
+on: 
+  workflow_dispatch:
+    inputs:
+      title:
+        description: "Custom title"
+        type: string
+        required: true
+        default: "Enter a title"
+
+
+jobs:
+  show-title:
+    uses: ./.github/workflows/workflow-template.yml
+    with:
+      title: ${{ inputs.title }}

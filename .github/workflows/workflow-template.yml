@@ -1,0 +1,15 @@
+name: Reusable Workflow
+on: 
+  workflow_call:
+    inputs:
+      title:
+        description: "Custom title"
+        type: string
+        required: true
+        default: "Enter a title"
+
+jobs:
+  console-log:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ inputs.title }}'
