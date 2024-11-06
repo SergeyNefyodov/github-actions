@@ -22,4 +22,4 @@ jobs:
       date: ${{ steps.log-date.date }}
     steps:
       - id: log-date
-        run: echo 'date=$(date)' >> GITHUB_OUTPUT
+        run: echo "date=$(date)" >> GITHUB_OUTPUT
