@@ -1,13 +1,14 @@
 name: Sixteenth Workflow
-run-name: Display context info
+run-name: Display noode version - matrix
 on: push
 
 jobs:
     test-node:
       strategy:
         matrix:
+          os: [ubuntu-latest, windows-2022]
           node-version: [12,14,17]
-      runs-on: ubuntu-latest
+      runs-on: ${{ matrix.os }}
       steps:
         - run: node -v
         - uses: actions/setup-node@v3
