@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use custom action
+      - name: Use Custom Action
         uses: ./.github/actions/cache-node-modules
 
