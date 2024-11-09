@@ -15,3 +15,7 @@ jobs:
         run: |
           node -v
           cat /etc/os-release
+      - name: Print new node version
+        uses: docker://node:20-bookworm
+        with:
+          args: -v
