@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Use Custom Action
-        uses: ./.github/workflows/actions/cache-node-modules/action.yml
+        uses: ./.github/workflows/actions/cache-node-modules
